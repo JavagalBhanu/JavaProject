@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="firefox"/>
+  <parameter name="ip" value="192.168.1.60"/>
+  <test name="Chrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="ip" value="192.168.1.60"/>
+    <classes>
+      <class name="script.CheckVersion">
+        <methods>
+          <include name="testVersion"/>
+          <include name="closeApplication"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- script.CheckVersion -->
+      <class name="script.ValidLogin">
+        <methods>
+          <include name="testValidLogin"/>
+          <include name="closeApplication"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- script.ValidLogin -->
+      <class name="script.InvalidLogin">
+        <methods>
+          <include name="testInvalidLogin"/>
+          <include name="closeApplication"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- script.InvalidLogin -->
+    </classes>
+  </test> <!-- Chrome(failed) -->
+  <test name="Firefox(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="ip" value="192.168.1.60"/>
+    <classes>
+      <class name="script.CheckVersion">
+        <methods>
+          <include name="testVersion"/>
+          <include name="closeApplication"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- script.CheckVersion -->
+      <class name="script.ValidLogin">
+        <methods>
+          <include name="testValidLogin"/>
+          <include name="closeApplication"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- script.ValidLogin -->
+      <class name="script.InvalidLogin">
+        <methods>
+          <include name="testInvalidLogin"/>
+          <include name="closeApplication"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- script.InvalidLogin -->
+    </classes>
+  </test> <!-- Firefox(failed) -->
+</suite> <!-- Failed suite [Suite] -->
