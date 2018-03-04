@@ -24,16 +24,14 @@ public class AutoUtil {
 		return v;
 	}
 	
-	public static void getPhoto(WebDriver driver,String folder,String testName) 
+	public static void getPhoto(WebDriver driver,String folder,String fileName) 
 	 {
-		Date d=new Date();
-		String s=d.toString();
-		String dateTime = s.replaceAll(":","_");
-		String path=folder+testName+dateTime+".png";
-		TakesScreenshot t=(TakesScreenshot)driver;
-		File srcFile= t.getScreenshotAs(OutputType.FILE);
-		File destFile=new File(path);
 		try {
+			String dateTime =new Date().toString().replaceAll(":","_");
+			String path=folder+fileName+dateTime+".png";
+			TakesScreenshot t=(TakesScreenshot)driver;
+			File srcFile= t.getScreenshotAs(OutputType.FILE);
+			File destFile=new File(path);
 			FileUtils.copyFile(srcFile, destFile);
 		}
 		catch (Exception e) {
